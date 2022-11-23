@@ -18,8 +18,6 @@ public class TestaNumero {
             System.out.println("Digite a operação que deseja realizar: "
             +                        " \n 1 para soma "
             +                        " \n 2 para subtração "
-            +                        " \n 3 para multiplicação  "
-            +                        " \n 4 para divisão "
             +                        " \n ou 0 para finalizar o programa"
             );
 
@@ -43,12 +41,6 @@ public class TestaNumero {
                 case 2:
                     imprimeCalculadora(operacao, n.subtracao(x, y), x, y);
                     break;
-                case 3:
-                    imprimeCalculadora(operacao, n.multiplicacao(x, y), x, y);
-                    break;
-                case 4:
-                    imprimeCalculadora(operacao, n.divisao(x, y), x, y);
-                    break;
             }
 
         }
@@ -62,8 +54,6 @@ public class TestaNumero {
         HashMap<Integer, String> mapOperacao = new HashMap<>();
         mapOperacao.put(1, " somado ");
         mapOperacao.put(2, " subtraido ");
-        mapOperacao.put(3, " multiplicado ");
-        mapOperacao.put(4, " dividido ");
         
         System.out.println("\n o resultado de " + x +  mapOperacao.get(operacao) + " por " 
         + y + " é igual a " + resultado + "\n");

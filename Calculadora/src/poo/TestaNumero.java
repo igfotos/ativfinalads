@@ -74,7 +74,7 @@ public class TestaNumero {
         + y + " é igual a " + resultado + "\n");
     }
 
-    static void imprimeResultado(String operacao, double x, double y, double resultado){
-       System.out.println("O resultado de " + x + operacao + " com " + y + " resulta em " + resultado);
-    }
+    // static void imprimeResultado(String operacao, double x, double y, double resultado){
+    //   System.out.println("O resultado de " + x + operacao + " com " + y + " resulta em " + resultado);
+    // }
 }

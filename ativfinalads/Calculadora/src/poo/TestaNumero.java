@@ -4,7 +4,6 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 public class TestaNumero {
-
     public static void main(String[] args) {
         Calculadora n = new Calculadora();
 
@@ -21,7 +20,9 @@ public class TestaNumero {
             +                        " \n 2 para subtração "
             +                        " \n 3 para multiplicado"
             +                        " \n 4 para divisao"
-            +                        " \n ou 0 para finalizar o programa"
+            +                        " \n 5 para potenciacao"
+            +                        " \n 6 para raiz quadrada"            
+            +                        " \n ou 0 para finalizar o programa"            		
             );
 
             operacao = scan.nextInt();
@@ -30,15 +31,44 @@ public class TestaNumero {
             //     continuar = false;
             //     return;
             // }
-
-            if(operacao != 0){
-                System.out.println("Informe o valor do primeiro número");
-                x = scan.nextDouble();
-
-                System.out.println("Informe o valor do segundo número");
-                y = scan.nextDouble();
+            
+            if(operacao == 1) {
+          	  System.out.println("Insira o primeiro número: ");
+          	   x = scan.nextDouble();
+          	  System.out.println("Insira o segundo número: ");
+          	   y = scan.nextDouble();
+          }
+            else if(operacao == 2) {
+              System.out.println("Insira o primeiro número: ");
+           	   x = scan.nextDouble();
+              System.out.println("Insira o segundo número: ");
+               y = scan.nextDouble();
+         }
+            else if(operacao == 3) {
+              System.out.println("Insira o primeiro número: ");
+           	   x = scan.nextDouble();
+           	  System.out.println("Insira o segundo número: ");
+           	   y = scan.nextDouble();
+         }  
+            else if(operacao == 4) {
+              System.out.println("Insira o primeiro número: ");
+           	   x = scan.nextDouble();
+           	  System.out.println("Insira o segundo número: ");
+           	   y = scan.nextDouble();
+         }
+            else if(operacao == 5) {
+              System.out.println("Insira o primeiro número: ");
+           	   x = scan.nextDouble();
+           	  System.out.println("Insira o segundo número: ");
+           	   y = scan.nextDouble();
+         } 
+            else if( operacao == 6) {
+        	  System.out.println("Insira o número: ");
+        	   x = scan.nextDouble();
+         } 
+            else if(operacao == 0) {
+            	System.out.println("O PROGRAMA FOI FINALIZADO");
             }
-
             switch (operacao) {
                 case 1:
                     imprimeCalculadora(operacao, n.soma(x, y), x, y);
@@ -52,6 +82,10 @@ public class TestaNumero {
                 case 4:
                     imprimeCalculadora(operacao, n.divisao(x, y), x, y);
                     break;
+                case 5:
+                	imprimeCalculadora(operacao, n.potenciacao(x, y), x, y);
+                case 6:
+                	imprimeCalculadora(operacao, n.raizQuadrada(x), x, 0);
                 case 0:
                     continuar = false;
                     break;
@@ -65,14 +99,8 @@ public class TestaNumero {
 
 
     static void imprimeCalculadora(int operacao, double resultado, double x, double y) {
-        HashMap<Integer, String> mapOperacao = new HashMap<>();
-        mapOperacao.put(1, " somado ");
-        mapOperacao.put(2, " subtraido ");
-        mapOperacao.put(3, " multiplicado ");
-        mapOperacao.put(4, " dividido ");
-        
-        System.out.println("\n o resultado de " + x +  mapOperacao.get(operacao) + " por " 
-        + y + " é igual a " + resultado + "\n");
+        System.out.println("O resultado do cálculo é: " + resultado);
+    
     }
 
     // static void imprimeResultado(String operacao, double x, double y, double resultado){

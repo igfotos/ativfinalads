@@ -28,5 +28,10 @@ public class Calculadora {
     public double divisao(double x, double y){
         return x / y;
     }
-
+    public double potenciacao(double x, double y){
+    	return Math.pow( x, y);
+    }
+    public double raizQuadrada(double x) {
+    	return Math.sqrt(x);
+    }
 }

@@ -5,6 +5,8 @@ import java.util.Scanner;
 public class JurosSimples {
     public static void main(String[] args){
         
+        Calculadora n = new Calculadora();        
+
         double c, i, t, j;
 
         Scanner scan = new Scanner(System.in);
@@ -20,7 +22,7 @@ public class JurosSimples {
         System.out.print("Digite a tempo : ");
         t = scan.nextDouble();
 
-        j = Calculadora.multiplicacao(Calculadora.multiplicacao(i, t), c);
+        j = n.multiplicacao(n.multiplicacao(i, t), c);
 
         System.out.println("O juros e: " + j);
         

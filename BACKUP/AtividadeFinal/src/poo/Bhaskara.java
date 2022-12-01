@@ -7,6 +7,8 @@ import java.util.Scanner;
 public class Bhaskara {
     public static void main(String[] args){
         
+        Calculadora n = new Calculadora();
+
         double a, b, c;
 
         Scanner scan = new Scanner(System.in);
@@ -22,13 +24,13 @@ public class Bhaskara {
         System.out.println("Digite o coeficiente c: ");
         c = scan.nextDouble();
 
-        double delta = Calculadora.potenciacao(b, 2) - Calculadora.multiplicacao(Calculadora.multiplicacao(a, c), 4);
+        double delta = n.potenciacao(b, 2) - n.multiplicacao(n.multiplicacao(a, c), 4);
 
-        double x = Calculadora.soma(-b, Calculadora.raizQuadrada(delta));
-        x = Calculadora.divisao(x, Calculadora.multiplicacao(2, a));
+        double x = n.soma(-b, n.raizQuadrada(delta));
+        x = n.divisao(x, n.multiplicacao(2, a));
 
-        double y = Calculadora.subtracao(-b, Calculadora.raizQuadrada(delta));
-        y = Calculadora.divisao(y, Calculadora.multiplicacao(2, a));
+        double y = n.subtracao(-b, n.raizQuadrada(delta));
+        y = n.divisao(y, n.multiplicacao(2, a));
 
         List<Double> raizes = new ArrayList<>();
             raizes.add(x);

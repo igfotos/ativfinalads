@@ -18,7 +18,7 @@ public class Media {
         System.out.println("Insira a Segunda Nota");
         y = teclado.nextDouble();
         
-        System.out.println("A média do aluno é: " + Calculadora.soma(x, y)/2);
+        System.out.println("A média do aluno é: " + n.soma(x, y)/2);
         
 	}
 }

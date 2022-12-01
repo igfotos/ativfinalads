@@ -19,7 +19,7 @@ public class IMC {
         System.out.println("Insira seu peso corporal: ");
         y = teclado.nextDouble();
         
-        System.out.println("O SEU IMC É: " + y/Calculadora.multiplicacao(x, x));
+        System.out.println("O SEU IMC É: " + y/n.multiplicacao(x, x));
         
 	}
 }

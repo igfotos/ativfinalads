@@ -1,9 +1,9 @@
 package poo;
 
 public class Calculadora {
-    private double x;
+    public double x;
 
-    private double getX() {
+    public double getX() {
         return x;
     }
 
@@ -27,6 +27,22 @@ public class Calculadora {
     
     public double divisao(double x, double y){
         return x / y;
+    }
+
+    public double potenciacao(double x, double y){
+    	return Math.pow( x, y);
+    }
+    
+    public double raizQuadrada(double x) {
+    	return Math.sqrt(x);
+    }
+
+    public double piso(double x){
+        return Math.floor(x);
+    }
+
+    public double teto(double x){
+         return Math.ceil(x);
     }
 
 }
